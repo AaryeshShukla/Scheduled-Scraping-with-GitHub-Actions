@@ -2,8 +2,7 @@ name: Daily Commit
 
 on:
   schedule:
-    # Runs every day at 09:30 UTC (replace with your desired time)
-    - cron: '30 9 * * *'
+    - cron: '30 9 * * *'  # every day at 09:30 UTC
 
 jobs:
   daily_commit:
@@ -12,7 +11,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Add or update file (email: 23f2003825@ds.study.iitm.ac.in)
+      - name: "Add or update file (email: 23f2003825@ds.study.iitm.ac.in)"
         run: |
           echo "Update: $(date)" >> daily_update.txt
 
